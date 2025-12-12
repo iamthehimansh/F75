@@ -17,14 +17,15 @@ tokenizer.import_token()
 block_size = 64
 batch_size = 32
 
+dropout=0
 
 # model
 model = F75(
     embd_dim=32,
     num_head=4,
-    attn_drop=0,
-    proj_drop=0,
-    dropout=0,
+    attn_drop=dropout,
+    proj_drop=dropout,
+    dropout=dropout,
     mlp_ratio=4,
     block_size=64,
     n_layre=8,

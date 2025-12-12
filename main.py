@@ -26,9 +26,9 @@ loader = DataLoader(dataset, batch_size=batch_size, shuffle=True, drop_last=True
 model = F75(
     embd_dim=32,
     num_head=4,
-    attn_drop=0,
-    proj_drop=0,
-    dropout=0,
+    attn_drop=0.1,
+    proj_drop=0.1,
+    dropout=0.1,
     mlp_ratio=4,
     block_size=64,
     n_layre=8,
@@ -40,7 +40,7 @@ train(model, loader, epochs=10, lr=3e-4, device=device,tokenizer=tokenizer)
 
 
 # save
-torch.save(model.state_dict(), "f75_shakespeare.pt")
+torch.save(model.state_dict(), "f75_shakespeare_with_dropout.pt")
 
 # test
 text_org="The littel "
