@@ -28,7 +28,7 @@ Non Dropout model output
 
 Dropout output
 
-![Dropout](images/non-dropout.png)
+![Dropout](images/dropout.png)
 
 ![F75](images/F75.png)
 
